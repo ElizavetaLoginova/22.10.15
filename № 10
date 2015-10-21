@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	while (true)
+	{
+		long long n;
+		cout << "Enter your number: " << endl;
+		cin >> n;
+
+		int m;
+		cout << "Enter the discharge (10, 100, 1000 etc.): " << endl;
+		cin >> m;
+		int k = m;
+
+		long long p = 0, t = abs(n), r = abs(n);
+		p = t / m;
+		m = m / 10;
+
+		r = n / m;
+		r = r % 10;
+		if (r >= 5)
+			p++;
+
+		if (n < 0)
+			p = -p;
+		cout << "Result is : " << p << endl;
+	}
+
+	system("pause");
+	system("cls");
+	return 0;
+}
